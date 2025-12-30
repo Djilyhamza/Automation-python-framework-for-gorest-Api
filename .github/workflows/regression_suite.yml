@@ -3,10 +3,10 @@ name: Regression suite
 on:
   push:
     branches:
-      - main
+      - Final-Branch
   pull_request:
     branches:
-      - main
+      - Final-Branch
   schedule:
     - cron: '30 2 * * *'
 
