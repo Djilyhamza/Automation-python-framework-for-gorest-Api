@@ -13,6 +13,8 @@ on:
 jobs:
   run-test:
     runs-on: ubuntu-latest
+    env:
+      GOREST_TOKEN: ${{ secrets.GOREST_TOKEN }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
