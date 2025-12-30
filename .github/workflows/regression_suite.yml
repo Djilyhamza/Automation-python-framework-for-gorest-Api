@@ -35,12 +35,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Verify GOREST_TOKEN
+      - name: Verify token exists
         run: |
-          if [ -z "$GOREST_TOKEN" ]; then
-            echo "::error ::GOREST_TOKEN is not set. Please add it in Repository Secrets."
-            exit 1
-          else
-            echo
+         if [ -z "$GOREST_TOKEN" ]; then
+         echo "::error ::GOREST_TOKEN is not set. Please add it in Repository Secrets."
+         exit 1
+         else
+           echo "GOREST_TOKEN is set"
+         fi
 
 
