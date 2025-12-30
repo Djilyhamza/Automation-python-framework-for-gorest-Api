@@ -1,6 +1,6 @@
 import requests
 import os
-#commentt
+
 class API:
     Base_URL = "https://gorest.co.in/public/v2/"
 
