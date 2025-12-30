@@ -41,5 +41,15 @@ jobs:
             echo "Error: GOREST_TOKEN is not set"
             exit 1
           else
-            echo
+            echo "GOREST_TOKEN is set"
+          fi
+
+      - name: Run tests
+        run: pytest -s --html=report.html
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-report
+          path: report.html
 
